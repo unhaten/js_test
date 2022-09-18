@@ -88,3 +88,87 @@
 
 //! ----------------------------------------------------------------
 
+//? TASK WITH BLACKJACK
+
+let player = {
+    name: "Max",
+    chips: 145,
+};
+let sum = 0;
+let hasBlackJack = false;
+let isAlive = false;
+let message = "";
+let cards = [];
+
+let messageEl = document.getElementById("message-el");
+let cardsEl = document.getElementById("card-el");
+let sumEl = document.querySelector("#sum-el");
+
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
+
+function getRandomCard() {
+    let randomCard = Math.floor(Math.random() * 13) + 1;
+    if (randomCard > 10) {
+        return 10;
+    }
+    if (randomCard === 1) {
+        return 11;
+    } else {
+        return randomCard;
+    }
+}
+
+function startGame() {
+    isAlive = true;
+    firstCard = getRandomCard();
+    secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+    renderGame();
+}
+
+function renderGame() {
+    cardsEl.textContent = "Cards: ";
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " ";
+    }
+
+    sumEl.textContent = "Sum: " + sum;
+    if (sum <= 20) {
+        message = "one more card?";
+    } else if (sum === 21) {
+        message = "blackjack";
+        hasBlackJack = true;
+    } else {
+        message = "out of da game";
+        isAlive = false;
+    }
+    messageEl.textContent = message;
+}
+
+function newCard() {
+    if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomCard();
+        sum += card;
+        cards.push(card);
+        renderGame();
+    }
+}
+
+let fruit = ["🥝", "🍓", "🥝", "🥝", "🍓"];
+
+let kiwiShelf = document.getElementById("kiwi-shelf");
+let strawberryShelf = document.getElementById("strawberry-shelf");
+
+function sortFruit() {
+    for (let i = 0; i < fruit.length; i++) {
+        if (fruit[i] === "🥝") {
+            kiwiShelf.textContent += "🥝";
+        } else if (fruit[i] === "🍓") {
+            strawberryShelf.textContent += "🍓";
+        }
+    }
+}
+
+sortFruit();
