@@ -169,15 +169,32 @@
 
 // console.log(hands[getHands()]);
 
-let fruit = ["🥝", "🍓", "🥝", "🥝", "🍓"];
+// let fruit = ["🥝", "🍓", "🥝", "🥝", "🍓"];
 
-let kiwiShelf = document.getElementById("kiwi-shelf");
-let strawberryShelf = document.getElementById("strawberry-shelf");
+// let kiwiShelf = document.getElementById("kiwi-shelf");
+// let strawberryShelf = document.getElementById("strawberry-shelf");
 
-for (i = 0; i < fruit.length; i++) {
-    if (fruit[i] === "🥝") {
-        kiwiShelf.textContent += "🥝";
-    } else if (fruit[i] === "🍓") {
-        strawberryShelf.textContent += "🍓";
-    }
-}
+// for (i = 0; i < fruit.length; i++) {
+//     if (fruit[i] === "🥝") {
+//         kiwiShelf.textContent += "🥝";
+//     } else if (fruit[i] === "🍓") {
+//         strawberryShelf.textContent += "🍓";
+//     }
+// }
+
+//! _----------------------------------------------
+
+// const playerName = "max";
+// let credits = 45;
+// let myLeads = ["a", "b", "c"];
+// for (i = 0; i < myLeads.length; i++) {
+//     console.log(myLeads[i])}
+
+const recipient = "James";
+const sender = "Max";
+
+const email = `Hey ${recipient}! 
+How are you doing? 
+Cheers ${sender}`;
+
+console.log(email);

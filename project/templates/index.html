@@ -31,16 +31,29 @@
         <br>
         <span id='sum-el'>Sum: </span> {% endcomment %}
         {% comment %} //! {% endcomment %}
-        <h1>Blackjack</h1>
+        {% comment %} //* BLACKJACK <h1>Blackjack</h1> 
         <p id='message-el'>Want to play a round?</p>
         <p id='card-el'>Cards:</p>
         <p id='sum-el'>Sum:</p>
+        <div id='grid-shelf'>
         <button class='button-el' onclick='startGame()'>START GAME</button>
+        <span id='player-name'></span>
         <br>
         <button class='button-el' onclick='newCard()'>NEW CARD</button>
+        <span id='player-chips'></span>
+        <br>
+        <button class='button-el' onclick='keepCard()'>KEEP THE CARDS</button>
+        <span id='enemy-cards'></span>
         <p id='player-el'></p>
+        </div>
         <div id='kiwi-shelf'></div>
-        <div id='strawberry-shelf'></div>
+        <br>
+        <div id='strawberry-shelf'></div> {% endcomment %} 
+        {% comment %} //* {% endcomment %}
+        <input type="text" id='input-el'>
+        <button id='input-btn'>OPEN DA BOX! </button>
+        <ul id='ul-el'></ul>
+        <div id='container'></div>
         <script src='{% static 'js/index.js' %}'></script>
     </body>
 </html>

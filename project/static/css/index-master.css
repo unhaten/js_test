@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
     color: goldenrod;
 }
 body {
@@ -26,8 +26,8 @@ body {
 
 #kiwi-shelf {
     margin: auto;
-    width: 100px;
     border: 3px solid black;
+    display: inline-block;
     background-color: greenyellow;
     padding: 10px;
     height: 50px;
@@ -35,9 +35,49 @@ body {
 }
 
 #strawberry-shelf {
-    width: 100px;
+    margin: auto;
+    display: inline-block;
     border: 3px solid black;
     padding: 10px;
     height: 50px;
     background-color: red;
+} */
+
+/* //! UPPER THINGS ARE BLACKJACK'S */
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-size: 32px;
+    font-family: "Ms Madi", cursive;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 2.5em;
+    border: 2px solid green;
+    box-sizing: border-box;
+}
+
+button {
+    color: white;
+    background-color: green;
+    padding: 10px 25px;
+    border: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+li a {
+    text-decoration: none;
+    color: green;
 }
